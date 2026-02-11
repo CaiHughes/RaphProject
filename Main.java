@@ -17,6 +17,7 @@ class NullStock {
         Integer price;
         Integer quantity;
         Integer addr;
+         public static Integer count = 0;
         public static boolean MissP = false;
         
         public NullStock(Integer price, Integer quantity){
@@ -24,6 +25,7 @@ class NullStock {
         if(price == null) {
             MissP = true;
             addr =  quantity;
+            count++;
             }
         /*else if(quantity == null) {
             boolean MissQ = true;
@@ -46,7 +48,7 @@ public class Main{
         String portfolio = "$" + Total_amount;
         
         if ( NullStock.MissP == true){
-        System.out.println("Missing Price for one or more stocks, price is at a minimum " + portfolio);
+        System.out.println("Missing Price of "+ NullStock.count + " stock(s), price is at a minimum " + portfolio);
         }
         else {
         System.out.println(portfolio);
