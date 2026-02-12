@@ -51,7 +51,7 @@ public class Main{
         System.out.println("Missing Price of "+ NullStock.count + " stock(s), price is at a minimum " + portfolio);
         }
         else {
-        System.out.println(portfolio);
+        System.out.println("Portfolio size: " + portfolio);
         }
 
     }
